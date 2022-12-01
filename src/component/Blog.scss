@@ -1,0 +1,17 @@
+@import "../index.scss";
+
+.blog-body {
+  border: 1px solid #ebebeb;
+  border-radius: 15px;
+  padding: 20px;
+
+  .blog-title {
+    font: bold 20px sans-serif;
+    margin: 0;
+  }
+
+  .blog-author {
+    margin: 0;
+    font: italic 12px sans-serif;
+  }
+}
