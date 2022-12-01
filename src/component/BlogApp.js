@@ -1,9 +1,13 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 const BlogApp = () => {
   return (
     <>
-      <p>Hello</p>
+      <NavBar />
+      <div class="content">
+        <p>Hello</p>
+      </div>
     </>
   );
 };
