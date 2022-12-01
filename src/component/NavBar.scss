@@ -1,0 +1,26 @@
+@import "../index.scss";
+
+.navigation-bar {
+  display: flex;
+  width: 100vw;
+  border-bottom: 5px solid $accent;
+
+  .logo {
+    width: 50%;
+    color: $primary;
+  }
+
+  .menu {
+    width: 50%;
+    align-items: center;
+    display: flex;
+
+    .menu-list {
+      margin: auto;
+      li {
+        display: inline;
+        margin: 0 20px;
+      }
+    }
+  }
+}
