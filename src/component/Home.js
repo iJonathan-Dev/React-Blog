@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 import Blog from "./Blog";
 
 const Home = () => {
+  //set JSON server url
+  const url = "http://localhost:3001/blogs/";
+
   const [blogs, setBlogs] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setisLoading] = useState(true);
 
   const handleDelete = (id) => {
-    fetch("http://localhost:3001/blogs/" + id, {
+    fetch(url + id, {
       method: "DELETE",
     }).then(() => fetchData());
   };
 
   const fetchData = () => {
-    fetch("http://localhost:3001/blogs")
+    fetch(url)
       .then((response) => {
         if (!response.ok) {
           throw Error("Failed to Fetch Data!");
