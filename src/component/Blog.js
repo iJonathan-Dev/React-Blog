@@ -1,17 +1,14 @@
 import React from "react";
 import "./Blog.scss";
 
-const Blog = ({ blogData, handleDelete }) => {
+const Blog = ({ blogData }) => {
   return (
-    <div class="blog-list">
+    <div className="blog-list">
       {blogData.map((data) => (
-        <div class="blog-body" key={data.id}>
-          <p class="blog-title">{data.title}</p>
-          <p class="blog-author">Author: {data.author}</p>
-          <p class="blog-content">{data.content}</p>
-          <button class="delete" onClick={() => handleDelete(data.id)}>
-            Delete
-          </button>
+        <div className="blog-body" key={data.id}>
+          <p className="blog-title">{data.title}</p>
+          <p className="blog-author">Author: {data.author}</p>
+          <p className="blog-content">{data.content}</p>
         </div>
       ))}
     </div>

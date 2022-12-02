@@ -3,16 +3,16 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   return (
-    <div class="navigation-bar">
-      <div class="logo">
+    <div className="navigation-bar">
+      <div className="logo">
         <h1>MY BLOG</h1>
       </div>
-      <div class="menu">
-        <ul class="menu-list">
-          <li class="menu-item">Home</li>
-          <li class="menu-item">New Blog</li>
-          <li class="menu-item">About</li>
-          <li class="menu-item">Contact</li>
+      <div className="menu">
+        <ul className="menu-list">
+          <li className="menu-item">Home</li>
+          <li className="menu-item">New Blog</li>
+          <li className="menu-item">About</li>
+          <li className="menu-item">Contact</li>
         </ul>
       </div>
     </div>

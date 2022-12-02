@@ -6,7 +6,7 @@ const BlogApp = () => {
   return (
     <>
       <NavBar />
-      <div class="content">
+      <div className="content">
         <Home />
       </div>
     </>
