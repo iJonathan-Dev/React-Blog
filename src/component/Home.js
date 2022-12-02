@@ -6,31 +6,36 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [isLoading, setisLoading] = useState(true);
 
-  //   const handleDelete = (id) => {
-  //     const newBlogs = blogs.filter((data) => data.id !== id);
+  const handleDelete = (id) => {
+    fetch("http://localhost:3001/blogs/" + id, {
+      method: "DELETE",
+    }).then(() => fetchData());
+  };
 
-  //     setBlogs(newBlogs);
-  //   };
+  const fetchData = () => {
+    fetch("http://localhost:3001/blogs")
+      .then((response) => {
+        if (!response.ok) {
+          throw Error("Failed to Fetch Data!");
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        setBlogs(data);
+        setisLoading(false);
+        setError(null);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setError(true);
+        setisLoading(false);
+      });
+  };
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:3001/blogs")
-        .then((response) => {
-          if (!response.ok) {
-            throw Error("Failed to Fetch Data!");
-          } else {
-            return response.json();
-          }
-        })
-        .then((data) => {
-          setBlogs(data);
-          setisLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          setError(true);
-          setisLoading(false);
-        });
+      fetchData();
     }, 1000);
   }, []);
 
@@ -39,7 +44,7 @@ const Home = () => {
       <h1>Welcome to My Blog!</h1>
       {error && <p>Failed to Fetch Data!</p>}
       {isLoading && <p>Loading...</p>}
-      {blogs && <Blog blogData={blogs} />}
+      {blogs && <Blog blogData={blogs} handleDelete={handleDelete} />}
     </div>
   );
 };
