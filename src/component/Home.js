@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Blog from "./Blog";
+import BlogCard from "./BlogCard";
 
 const Home = () => {
   //set JSON server url
@@ -47,7 +47,7 @@ const Home = () => {
       <h1>Welcome to My Blog!</h1>
       {error && <p>Failed to Fetch Data!</p>}
       {isLoading && <p>Loading...</p>}
-      {blogs && <Blog blogData={blogs} handleDelete={handleDelete} />}
+      {blogs && <BlogCard blogData={blogs} handleDelete={handleDelete} />}
     </div>
   );
 };

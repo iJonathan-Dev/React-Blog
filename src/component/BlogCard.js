@@ -1,8 +1,8 @@
 import React from "react";
-import "./Blog.scss";
+import "./BlogCard.scss";
 import { Link } from "react-router-dom";
 
-const Blog = ({ blogData, handleDelete }) => {
+const BlogCard = ({ blogData, handleDelete }) => {
   return (
     <div className="blog-list">
       {blogData.map((data) => (
@@ -23,4 +23,4 @@ const Blog = ({ blogData, handleDelete }) => {
   );
 };
 
-export default Blog;
+export default BlogCard;

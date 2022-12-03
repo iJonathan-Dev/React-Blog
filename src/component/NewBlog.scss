@@ -1,0 +1,19 @@
+.new-blog {
+  display: block;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+
+  button {
+    margin: auto;
+    display: block;
+  }
+}
+
+form > *:not(button) {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
