@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Welcome to My Blog!</h1>
+      <h2>Welcome to My Blog!</h2>
       {error && <p>Failed to Fetch Data!</p>}
       {isLoading && <p>Loading...</p>}
       {blogs && <BlogCard blogData={blogs} handleDelete={handleDelete} />}

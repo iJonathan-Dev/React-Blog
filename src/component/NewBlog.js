@@ -25,7 +25,7 @@ const NewBlog = () => {
 
   return (
     <div className="new-blog">
-      <h1>Create a New Blog</h1>
+      <h2>Create a New Blog</h2>
       <form>
         <label for="title">Title:</label>
         <input type="text" id="title" value={title} onChange={(event) => setTitle(event.target.value)} required></input>
