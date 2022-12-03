@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blog.scss";
+import { Link } from "react-router-dom";
 
 const Blog = ({ blogData, handleDelete }) => {
   return (
@@ -12,6 +13,10 @@ const Blog = ({ blogData, handleDelete }) => {
           <button className="delete" onClick={() => handleDelete(data.id)}>
             Delete
           </button>
+
+          <Link to={`/blogs/${data.id}`}>
+            <button className="view-blog">View Blog</button>
+          </Link>
         </div>
       ))}
     </div>
