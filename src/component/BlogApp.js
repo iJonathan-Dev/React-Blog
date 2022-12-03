@@ -6,6 +6,7 @@ import About from "./About";
 import Contact from "./Contact";
 import BlogDetails from "./BlogDetails";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./BlogApp.scss";
 
 const BlogApp = () => {
   return (
