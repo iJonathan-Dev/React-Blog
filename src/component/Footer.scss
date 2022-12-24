@@ -1,0 +1,17 @@
+@import "../index.scss";
+
+#footer {
+  background-color: $accent;
+  text-align: center;
+  padding: 5px;
+  margin-top: 20px;
+  width: 100%;
+
+  p {
+    margin: 0;
+
+    a {
+      color: black;
+    }
+  }
+}

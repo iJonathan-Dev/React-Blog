@@ -6,9 +6,11 @@ const NewBlog = () => {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
 
+  //POST new blog data
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    //create blog object based on form data
     const blog = { title, author, content };
 
     fetch("http://localhost:3001/blogs", {

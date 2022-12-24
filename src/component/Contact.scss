@@ -1,0 +1,44 @@
+.contact {
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  width: 600px;
+  margin: auto;
+  box-shadow: 0px 0px 8px #888888;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+#profile-pic {
+  width: 200px;
+  margin: auto;
+  display: block;
+  border: 5px solid black;
+  border-radius: 100%;
+}
+
+.name {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  vertical-align: middle;
+}
+
+.icon {
+  display: inline-block;
+  width: 40px;
+
+  img {
+    width: 100%;
+  }
+}
+.profile-url {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}

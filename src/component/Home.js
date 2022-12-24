@@ -5,16 +5,23 @@ const Home = () => {
   //set JSON server url
   const url = "http://localhost:3001/blogs/";
 
+  //controlling blogs render state
   const [blogs, setBlogs] = useState(null);
+
+  //controlling error message render state
   const [error, setError] = useState(null);
+
+  //controlling loading message render state
   const [isLoading, setisLoading] = useState(true);
 
+  //Delete blog function based on ID
   const handleDelete = (id) => {
     fetch(url + id, {
       method: "DELETE",
     }).then(() => fetchData());
   };
 
+  //fetching all blog function
   const fetchData = () => {
     fetch(url)
       .then((response) => {

@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import BlogDetails from "./BlogDetails";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./BlogApp.scss";
+import Footer from "./Footer";
 
 const BlogApp = () => {
   return (
@@ -32,6 +33,7 @@ const BlogApp = () => {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );
